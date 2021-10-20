@@ -1,3 +1,7 @@
+import { ComunaService } from './comuna.service';
+import { CentrosRecreativosService } from './centros-recreativos.service';
+import { UtilService } from './util.service';
+import { NotificacionService } from './notificacion.service';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +9,9 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
 
-  constructor() { }
+  constructor(
+    public notifService: NotificacionService,
+    public utilService: UtilService,
+    public centroService: CentrosRecreativosService,
+    public comunaService: ComunaService) { }
 }

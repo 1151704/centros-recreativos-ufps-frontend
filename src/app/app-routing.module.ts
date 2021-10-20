@@ -1,3 +1,4 @@
+import { InicioMapaComponent } from './components/inicio-mapa/inicio-mapa.component';
 import { MainInicioComponent } from './components/main-inicio/main-inicio.component';
 import { MainComponent } from './components/main/main.component';
 import { InicioSignInComponent } from './components/inicio-sign-in/inicio-sign-in.component';
@@ -10,8 +11,9 @@ const routes: Routes = [
     path: "inicio",
     component: InicioComponent,
     children: [
-      { path: "", component: InicioSignInComponent },
-      { path: "signin", component: InicioSignInComponent }
+      { path: "", component: InicioMapaComponent },
+      { path: "signin", component: InicioSignInComponent },
+      { path: "mapas", component: InicioMapaComponent }
     ]
   },
   { path: "", redirectTo: "inicio", pathMatch: "full" },

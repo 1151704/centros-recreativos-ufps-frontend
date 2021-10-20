@@ -17,6 +17,7 @@ import { MainInicioComponent } from './components/main-inicio/main-inicio.compon
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { InicioMapaComponent } from './components/inicio-mapa/inicio-mapa.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
     MainInicioComponent,
     MainFooterComponent,
     MainHeaderComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    InicioMapaComponent
   ],
   imports: [
     BrowserModule,
