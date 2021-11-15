@@ -7,6 +7,7 @@ import { FormBuilder } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import Swal from 'sweetalert2';
 import { AuthLoginInfo } from 'src/app/auth/login-info';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-inicio-sign-in',
@@ -60,14 +61,20 @@ export class InicioSignInComponent implements OnInit {
         data => {
           this.tokenStorage.saveToken(data.accessToken);
           this.tokenStorage.saveUser(data.usuario);
-
           this.isLoginFailed = false;
           this.isLoggedIn = true;
 
           this.authService.isLoggedIn();
 
-          this.router.navigate(['/main']);
-          Swal.close();
+          let hora = moment(data.usuario.fechaRestablecer, "YYYY-MM-DD hh:mm:ss");
+          if (data.usuario.fechaRestablecer && hora.isValid() && hora.diff(moment(), 'hours') <= 24) {
+            Swal.fire('Actualice su contraseña', `No olvide actualizar su contraseña`, "info");
+            this.router.navigate(['/main/perfil']);
+          } else {
+            Swal.close();
+            this.router.navigate(['/main']);
+          }
+
         },
         error => {
           this.errorMessage = 'Servidor fuera de línea';

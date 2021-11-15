@@ -9,6 +9,7 @@ export class Usuario {
   identificacion: string;
   username: string;
   fechaRegistro: string;
+  fechaRestablecer: string;
   tipoId: TipoIdentificacion;
   rol: Rol;
   enable: boolean;

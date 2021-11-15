@@ -28,6 +28,7 @@ import { MainCentrosRecreativosEditarComponent } from './components/main-centros
 import { MainComunasComponent } from './components/main-comunas/main-comunas.component';
 import { MainComunaAddComponent } from './components/main-comuna-add/main-comuna-add.component';
 import { DetalleCentroComponent } from './components/modals/detalle-centro/detalle-centro.component';
+import { InicioRestablecerComponent } from './components/inicio-restablecer/inicio-restablecer.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { DetalleCentroComponent } from './components/modals/detalle-centro/detal
     MainCentrosRecreativosEditarComponent,
     MainComunasComponent,
     MainComunaAddComponent,
-    DetalleCentroComponent
+    DetalleCentroComponent,
+    InicioRestablecerComponent
   ],
   imports: [
     BrowserModule,

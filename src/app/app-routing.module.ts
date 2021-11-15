@@ -1,3 +1,4 @@
+import { InicioRestablecerComponent } from './components/inicio-restablecer/inicio-restablecer.component';
 import { MainComunasComponent } from './components/main-comunas/main-comunas.component';
 import { MainComunaAddComponent } from './components/main-comuna-add/main-comuna-add.component';
 import { MainCentrosRecreativosRegistrarComponent } from './components/main-centros-recreativos-registrar/main-centros-recreativos-registrar.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
     children: [
       { path: "", component: InicioMapaComponent },
       { path: "signin", component: InicioSignInComponent },
+      { path: "restablecer", component: InicioRestablecerComponent },
       { path: "mapas", component: InicioMapaComponent }
     ]
   },

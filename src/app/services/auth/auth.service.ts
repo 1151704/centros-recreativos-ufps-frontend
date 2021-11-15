@@ -1,3 +1,5 @@
+import { AuthLoginRestablecer } from './../../auth/login-info-restablecer';
+import { API_REST } from './../../url.constants';
 import { Observable } from 'rxjs';
 import { JwtResponse } from '../../auth/jwt-response';
 import { AuthLoginInfo } from '../../auth/login-info';
@@ -20,6 +22,10 @@ export class AuthService {
 
   attemptAuth(credentials: AuthLoginInfo): Observable<JwtResponse> {
     return this.http.post<JwtResponse>(this.loginUrl, credentials, httpOptions);
+  }
+  
+  restablecer(credentials: AuthLoginRestablecer): Observable<JwtResponse> {
+    return this.http.post<JwtResponse>(`${API_REST}usuario/restablecer`, credentials, httpOptions);
   }
 
   isLoggedIn(): Observable<boolean> {
