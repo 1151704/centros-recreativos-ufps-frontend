@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="#" onclick="return false" [routerLink]="[ '/main/comunas' ]">Comunas</a>
+      </li>
+      <li class="breadcrumb-item active">Registrar</li>
+    </ol>
+  
+    <div class="card mb-3 ">
+      <div class="card-header">
+        <i class="fas fa-table"></i>
+        Registrar Comuna
+      </div>
+      <div class="card-body">
+  
+        <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>
+              Nombre:
+            </label>
+            <input type="text" class="form-control" formControlName="nombreComuna" required>
+          </div>
+  
+          <div class="form-group">
+            <label>
+              Acronimo:
+            </label>
+            <input type="text" class="form-control" formControlName="codigoComuna">
+          </div>
+  
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-success" [disabled]="!usuarioForm.valid">Registrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

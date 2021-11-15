@@ -17,10 +17,10 @@ export const TIPOS_DOCUMENTOS = [
 ]
 
 export const ROLES: Rol[] = [
-  new Rol('ROLE_EPS','Eps'),
-  new Rol('ROLE_USER','Usuario'),
-  new Rol('ROLE_FINZ','Financiero'),
-  new Rol('ROLE_CONS','Consultas'),
+  new Rol('ROLE_ADMIN','Administrador'),
+  // new Rol('ROLE_USER','Usuario'),
+  // new Rol('ROLE_FINZ','Financiero'),
+  // new Rol('ROLE_CONS','Consultas'),
 ]
 
 export enum Mes {

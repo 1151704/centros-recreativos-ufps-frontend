@@ -1,0 +1,47 @@
+<div class="modal" id="modalDetalleCentro" tabindex="-1" role="dialog" aria-labelledby="modalDetalleCentroLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" style="min-width: 80%" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalDetalleCentroLabel">Detalle de Centro Recreativo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #modalClose>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" *ngIf="centro">
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-6">
+              <div class="form-label-group">
+                <input type="text" class="form-control" [value]="centro.comunaId.nombreComuna" disabled readonly>
+                <label>Nombre de Comuna</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-label-group">
+                <input type="text" class="form-control" [value]="centro.nombreCentro" disabled readonly>
+                <label>Nombre de Centro</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-6">
+              <div class="form-label-group">
+                <input type="text" class="form-control" [value]="centro.direccionCentro" disabled readonly>
+                <label>Dirección</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-label-group">
+                <input type="text" class="form-control" [value]="centro.descripcionCentro" disabled readonly>
+                <label>Descripción</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

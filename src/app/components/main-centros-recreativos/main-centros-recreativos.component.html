@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="card mb-3 ">
+    <div class="card-header">
+      <i class="fas fa-table"></i>
+      Centros Recreativos
+    </div>
+    <div class="card-body">
+
+      <button class="btn btn-success btn-sm" [routerLink]="[ '/main/centro-add/']" title="Registrar"> <i
+          class="fa fa-plus"></i> Registrar</button>
+
+      <div class="table-responsive">
+        <table class=" mt-2 table table-striped table-bordered table-sm">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Comuna</th>
+              <th>Dirección</th>
+              <th>Posición</th>
+              <th>Fecha Registro</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngIf="epss.length == 0">
+              <td colspan="6" align="center">No hay registros</td>
+            </tr>
+            <tr *ngFor="let eps of epss; let i = index"
+                [ngClass]="{'tr-color-0': !eps.enable, 'tr-color-1': eps.enable}">
+              <td>
+                <button title="Editar" class="btn btn-info btn-sm m-1" (click)="adminUsuario(eps)"><i
+                    class="fa fa-edit"></i></button>
+              </td>
+              <td>{{eps.nombreCentro}}</td>
+              <td>{{eps.descripcionCentro}}</td>
+              <td>{{eps.comunaId?eps.comunaId.nombreComuna:''}}</td>
+              <td>{{eps.direccionCentro}}</td>
+              <td>X: {{eps.posicionX}}, Y: {{eps.posicionY}}</td>
+              <td>{{eps.fechaRegistro}}</td>
+              <td>
+                  <button class="btn btn-warning btn-sm m-1"
+                      (click)="editUsuario(eps)">{{eps.enable?'Desactivar': 'Activar'}}</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

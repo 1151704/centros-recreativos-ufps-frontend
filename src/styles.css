@@ -20,3 +20,6 @@
     max-height: 60vh;
     overflow-y: auto;
 }
+.d-none {
+    display: none;
+}

@@ -1,0 +1,76 @@
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="#" onclick="return false" [routerLink]="[ '/main/centros' ]">Centro Recreativo</a>
+      </li>
+      <li class="breadcrumb-item active">Actualizar</li>
+    </ol>
+  
+    <div class="card mb-3 ">
+      <div class="card-header">
+        <i class="fas fa-table"></i>
+        Actualizar Centro Recreativo
+      </div>
+      <div class="card-body">
+  
+        <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>
+              Nombre:
+            </label>
+            <input type="text" class="form-control" formControlName="nombreCentro" required>
+          </div>
+  
+          <div class="form-group">
+            <label>
+              Descripción:
+            </label>
+            <input type="text" class="form-control" formControlName="descripcionCentro">
+          </div>
+  
+          <div class="form-group">
+            <label>
+              Comuna:
+            </label>
+            <select class="form-control" formControlName="comunaId">
+              <option *ngFor="let tipo of comunas" value="{{tipo.id}}">{{tipo.nombreComuna}}</option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label>
+              Dirección:
+            </label>
+            <input type="text" class="form-control" formControlName="direccionCentro">
+          </div>
+  
+          <div class="form-group">
+            <label>
+              Posición X:
+            </label>
+            <input type="text" class="form-control" formControlName="posicionX">
+          </div>
+  
+          <div class="form-group">
+            <label>
+              Posición Y:
+            </label>
+            <input type="text" class="form-control" formControlName="posicionY">
+          </div>
+
+          <div class="form-group">
+              <label>
+                  Estado:
+              </label>
+              <input type="checkbox" formControlName="enable">
+          </div>
+  
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-success" [disabled]="!usuarioForm.valid">Actualizar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

@@ -4,3 +4,24 @@
         <span>&nbsp;Inicio</span>
     </a>
 </li>
+
+<li class="nav-item" [routerLinkActive]="['active']" 
+  [routerLink]="[ '/main/usuarios/' ]">
+  <a class="nav-link" href="#" onclick="return false;">
+    <i class="fas fa-users-cog"></i>
+    <span>&nbsp;Usuarios</span></a>
+</li>
+
+<li class="nav-item" [routerLinkActive]="['active']" 
+  [routerLink]="[ '/main/comunas/' ]">
+  <a class="nav-link" href="#" onclick="return false;">
+    <i class="fas fa-map-marked-alt"></i>
+    <span>&nbsp;Comunas</span></a>
+</li>
+
+<li class="nav-item" [routerLinkActive]="['active']" 
+  [routerLink]="[ '/main/centros/' ]">
+  <a class="nav-link" href="#" onclick="return false;">
+    <i class="fas fa-futbol"></i>
+    <span>&nbsp;Centros Recreativos</span></a>
+</li>

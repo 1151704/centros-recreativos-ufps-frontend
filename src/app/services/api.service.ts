@@ -1,3 +1,4 @@
+import { UsuarioService } from './usuario.service';
 import { ComunaService } from './comuna.service';
 import { CentrosRecreativosService } from './centros-recreativos.service';
 import { UtilService } from './util.service';
@@ -13,5 +14,6 @@ export class ApiService {
     public notifService: NotificacionService,
     public utilService: UtilService,
     public centroService: CentrosRecreativosService,
-    public comunaService: ComunaService) { }
+    public comunaService: ComunaService, 
+    public usuarioService: UsuarioService) { }
 }

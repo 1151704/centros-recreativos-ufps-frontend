@@ -18,6 +18,16 @@ import { MainFooterComponent } from './components/main-footer/main-footer.compon
 import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { InicioMapaComponent } from './components/inicio-mapa/inicio-mapa.component';
+import { MainUsuariosComponent } from './components/main-usuarios/main-usuarios.component';
+import { MainCentrosRecreativosComponent } from './components/main-centros-recreativos/main-centros-recreativos.component';
+import { MainPerfilComponent } from './components/main-perfil/main-perfil.component';
+import { MainUsuarioEditarComponent } from './components/main-usuario-editar/main-usuario-editar.component';
+import { MainUsuarioRegistrarComponent } from './components/main-usuario-registrar/main-usuario-registrar.component';
+import { MainCentrosRecreativosRegistrarComponent } from './components/main-centros-recreativos-registrar/main-centros-recreativos-registrar.component';
+import { MainCentrosRecreativosEditarComponent } from './components/main-centros-recreativos-editar/main-centros-recreativos-editar.component';
+import { MainComunasComponent } from './components/main-comunas/main-comunas.component';
+import { MainComunaAddComponent } from './components/main-comuna-add/main-comuna-add.component';
+import { DetalleCentroComponent } from './components/modals/detalle-centro/detalle-centro.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +40,17 @@ import { InicioMapaComponent } from './components/inicio-mapa/inicio-mapa.compon
     MainFooterComponent,
     MainHeaderComponent,
     MainMenuComponent,
-    InicioMapaComponent
+    InicioMapaComponent,
+    MainUsuariosComponent,
+    MainCentrosRecreativosComponent,
+    MainPerfilComponent,
+    MainUsuarioEditarComponent,
+    MainUsuarioRegistrarComponent,
+    MainCentrosRecreativosRegistrarComponent,
+    MainCentrosRecreativosEditarComponent,
+    MainComunasComponent,
+    MainComunaAddComponent,
+    DetalleCentroComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="card mb-3 ">
+      <div class="card-header">
+        <i class="fas fa-table"></i>
+        Comunas
+      </div>
+      <div class="card-body">
+  
+        <button class="btn btn-success btn-sm" [routerLink]="[ '/main/comuna-add/']" title="Registrar"> <i
+            class="fa fa-plus"></i> Registrar</button>
+  
+        <div class="table-responsive">
+          <table class=" mt-2 table table-striped table-bordered table-sm">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Acronimo</th>
+                <th>Fecha Registro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngIf="epss.length == 0">
+                <td colspan="6" align="center">No hay registros</td>
+              </tr>
+              <tr *ngFor="let eps of epss; let i = index" >
+                <td>{{eps.nombreComuna}}</td>
+                <td>{{eps.codigoComuna}}</td>
+                <td>{{eps.fechaRegistro}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

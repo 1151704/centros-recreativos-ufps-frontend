@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="card mb-3 ">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Usuarios
+        </div>
+        <div class="card-body">
+
+            <button class="btn btn-success btn-sm" [routerLink]="[ '/main/usuario-add/']" title="Registrar"> <i
+                    class="fa fa-plus"></i> Registrar</button>
+            <div class="table-responsive">
+                <table class=" mt-2 table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Usuario</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Identificación</th>
+                            <th>Rol</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngIf="usuarios.length == 0">
+                            <td colspan="9" align="center">No hay registros</td>
+                        </tr>
+                        <tr *ngFor="let usuario of usuarios; let i = index"
+                            [ngClass]="{'tr-color-0': !usuario.enable, 'tr-color-1': usuario.enable}">
+                            <td>
+                                <button title="Editar" *ngIf="info && usuario.username != info.username" class="btn btn-info btn-sm m-1"
+                                    (click)="adminUsuario(usuario)"><i class="fa fa-edit"></i></button>
+                            </td>
+                            <td>{{usuario.username}}</td>
+                            <td>{{usuario.nombres}}</td>
+                            <td>{{usuario.apellidos}}</td>
+                            <td>
+                                {{(usuario.tipoId ? usuario.tipoId.tipo +' ': '')+ usuario.identificacion}}
+                            </td>
+                            <td>{{usuario.rol ? usuario.rol.descripcion: 'Sin rol'}}</td>
+                            <td>
+                                <button *ngIf="info && usuario.username != info.username"
+                                    class="btn btn-warning btn-sm m-1"
+                                    (click)="editUsuario(usuario)">{{usuario.enable?'Desactivar': 'Activar'}}</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
