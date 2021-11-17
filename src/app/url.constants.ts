@@ -1,9 +1,17 @@
+const relacionUrls = [
+   {client: 'http://localhost:4200', backend: 'http://localhost:8080/'},
+   {client: 'https://centros-recreativos-ufps.herokuapp.com', backend: 'https://centros-recreativos-ufps-back.herokuapp.com/'},
+]
 const getURlBackend = () => {
 
-   let client = `${window.location.protocol}//${window.location.hostname}`
-   let portBackend = 8089;
+   let client = window.location.origin
 
-   return `${client}:${portBackend}/`
+   let actual = relacionUrls.filter(item => item.client == client)
+
+   if (actual && actual.length==1) {
+      return actual[0].backend
+   }
+   return client
 }
 
 export const REST = getURlBackend();
