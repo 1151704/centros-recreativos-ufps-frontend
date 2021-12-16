@@ -15,13 +15,14 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainUsuarioEditarComponent } from './components/main-usuario-editar/main-usuario-editar.component';
-
+import { IndexComponent } from './components/index/index.component';
 const routes: Routes = [
   {
     path: "inicio",
     component: InicioComponent,
     children: [
-      { path: "", component: InicioMapaComponent },
+      { path: "", component: IndexComponent},
+      { path: "InicioMapas", component: InicioMapaComponent },
       { path: "signin", component: InicioSignInComponent },
       { path: "restablecer", component: InicioRestablecerComponent },
       { path: "mapas", component: InicioMapaComponent }
@@ -33,12 +34,12 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       { path: "", component: MainInicioComponent },
-      
+
       { path: "usuarios", component: MainUsuariosComponent },
       { path: "usuario-edit", component: MainUsuarioEditarComponent },
       { path: "usuario-add", component: MainUsuarioRegistrarComponent },
       { path: "perfil", component: MainPerfilComponent },
-      
+
       { path: "comunas", component: MainComunasComponent },
       { path: "comuna-add", component: MainComunaAddComponent },
 
