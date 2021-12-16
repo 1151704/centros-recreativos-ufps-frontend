@@ -29,6 +29,7 @@ import { MainComunasComponent } from './components/main-comunas/main-comunas.com
 import { MainComunaAddComponent } from './components/main-comuna-add/main-comuna-add.component';
 import { DetalleCentroComponent } from './components/modals/detalle-centro/detalle-centro.component';
 import { InicioRestablecerComponent } from './components/inicio-restablecer/inicio-restablecer.component';
+import { IndexComponent } from './components/index/index.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { InicioRestablecerComponent } from './components/inicio-restablecer/inic
     MainComunasComponent,
     MainComunaAddComponent,
     DetalleCentroComponent,
-    InicioRestablecerComponent
+    InicioRestablecerComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
