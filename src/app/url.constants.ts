@@ -1,5 +1,5 @@
 const relacionUrls = [
-   {client: 'http://localhost:4200', backend: 'http://localhost:8080/'},
+   {client: 'http://localhost:4200', backend: "https://centros-recreativos-ufps-back.herokuapp.com/"},
    {client: 'https://centros-recreativos-ufps.herokuapp.com', backend: 'https://centros-recreativos-ufps-back.herokuapp.com/'},
 ]
 const getURlBackend = () => {
@@ -14,7 +14,7 @@ const getURlBackend = () => {
    return client
 }
 
-export const REST = "https://centros-recreativos-ufps-back.herokuapp.com/";
+export const REST = getURlBackend();
 export const API_REST = REST+"api/";
 
 export const TOKEN = {
