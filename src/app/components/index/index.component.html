@@ -2,7 +2,7 @@
 	<aside class="navbar">
 		<div>
 			<ul>
-				<li><a [routerLink]="[ './InicioMapas' ]">Acceder</a></li>
+				<li><a [routerLink]="[ '/inicio/signin' ]" onclick="return false;" class="btn btn-outline-primary">Ingresar</a></li>
 			</ul>
 		</div>
 	</aside>
@@ -30,13 +30,11 @@
 				</header>
 
 				<!-- Banner -->
-				<section id="banner">
+				<section >
+      <div>
 
-					<span class="image object">
-						<img alt="imagen"
-							src="https://fotografias.lasexta.com/clipping/cmsimages01/2016/04/11/DABD7932-E443-48B5-821A-C7DFAF433161/default.jpg"
-							alt="" />
-					</span>
+                  <app-inicio-mapa></app-inicio-mapa>
+      </div>
 				</section>
 
 				<section class="banner">
@@ -44,7 +42,7 @@
 
 							<h1></h1>
 							<p>
-								La aplicación software será pública para el acceso de todos los usuarios, donde podrán
+								La aplicación será pública para el acceso de todos los usuarios, donde podrán
 								consultar en su comuna o en otras comunas los diferentes centros recreativos que están
 								en las comuna 4 y 7 de ciudad de Cúcuta y algunos del municipio de los patios, podrán
 								visualizar el estado de está si en el momento se encuentra disponible u ocupada y ver su

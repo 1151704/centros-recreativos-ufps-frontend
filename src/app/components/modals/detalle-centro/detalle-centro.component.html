@@ -44,16 +44,16 @@
 
         <button class="btn btn-success btn-sm" (click)="openCalificacion=true" title="Registrar"> <i
             class="fa fa-plus"></i> Registrar</button>
-        
+
         <div class="table-responsive" *ngIf="!openCalificacion">
           <table class=" mt-2 table table-bordered table-sm">
             <thead>
+              <!-- <label >Por {{usuario.nombre}} el {{usuario.fechaRegistro}}   </label>
+              <label> Calificacion {{usuario.calificacion}} Puntos </label>
+              <label>Observacion: {{usuario.observacion}} </label> -->
+
               <tr>
-                <th>Calificación</th>
-                <th>Nombre</th>
-                <th>Correo</th>
-                <th>Calificación</th>
-                <th>Comentario</th>
+                <th>Calificaciones</th>
               </tr>
             </thead>
             <tbody>
@@ -61,11 +61,19 @@
                 <td colspan="9" align="center">No hay registros</td>
               </tr>
               <tr *ngFor="let usuario of calificaciones; let i = index" >
-                <td>{{usuario.calificacion}}</td>
-                <td>{{usuario.nombre}}</td>
+                <td>
+
+                  <label style="font-weight: bold">Por</label> {{usuario.nombre}}
+                  <label style="font-weight: bold">el</label> {{usuario.fechaRegistro}} <br>
+                  <label style="font-weight: bold">Calificacion</label> {{usuario.calificacion}}
+                  Puntos <br>
+                  <label style="font-weight: bold">Observacion</label> {{usuario.observacion}}
+
+                </td>
+                <!-- <td>{{usuario.nombre}}</td>
                 <td>{{usuario.correo}}</td>
                 <td>{{usuario.observacion}}</td>
-                <td>{{usuario.fechaRegistro}}</td>
+                <td>{{usuario.fechaRegistro}}</td> -->
               </tr>
             </tbody>
           </table>
