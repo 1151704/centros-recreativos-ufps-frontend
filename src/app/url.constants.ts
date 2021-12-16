@@ -6,7 +6,7 @@ const getURlBackend = () => {
    return `${client}:${portBackend}/`
 }
 
-export const REST = getURlBackend();
+export const REST = "https://centros-recreativos-ufps-back.herokuapp.com/";
 export const API_REST = REST+"api/";
 
 export const TOKEN = {
