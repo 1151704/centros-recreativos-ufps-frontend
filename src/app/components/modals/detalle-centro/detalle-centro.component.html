@@ -88,36 +88,36 @@
           <div class="card-body">
 
             <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()">
-              <div class="d-flex justify-content-center">
-                <div class="m-2">
-                  <label>
-                    1:
+              <div class="">
+                <div class="">
+                  <label for="calificacion1">
+                    <i class="fas fa-star"></i>:
                   </label>
-                  <input type="radio" class="form-control" formControlName="calificacion" value="1">
+                  <input id="calificacion1" type="radio" class="" formControlName="calificacion" value="1">
                 </div>
-                <div class="m-2">
-                  <label>
-                    2:
+                <div class="">
+                  <label for="calificacion2">
+                    <i class="fas fa-star" *ngFor="let i of [1,2]"></i>:
                   </label>
-                  <input type="radio" class="form-control" formControlName="calificacion" value="2">
+                  <input id="calificacion2" type="radio" class="" formControlName="calificacion" value="2">
                 </div>
-                <div class="m-2">
-                  <label>
-                    3:
+                <div class="">
+                  <label for="calificacion3">
+                    <i class="fas fa-star" *ngFor="let i of [1,2,3]"></i>:
                   </label>
-                  <input type="radio" class="form-control" formControlName="calificacion" value="3">
+                  <input id="calificacion3" type="radio" class="" formControlName="calificacion" value="3">
                 </div>
-                <div class="m-2">
-                  <label>
-                    4:
+                <div class="">
+                  <label for="calificacion4">
+                    <i class="fas fa-star" *ngFor="let i of [1,2,3,4]"></i>:
                   </label>
-                  <input type="radio" class="form-control" formControlName="calificacion" value="4">
+                  <input id="calificacion4" type="radio" class="" formControlName="calificacion" value="4">
                 </div>
-                <div class="m-2">
-                  <label>
-                    5:
+                <div class="">
+                  <label for="calificacion5">
+                    <i class="fas fa-star" *ngFor="let i of [1,2,3,4,5]"></i>:
                   </label>
-                  <input type="radio" class="form-control" formControlName="calificacion" value="5">
+                  <input id="calificacion5" type="radio" class="" formControlName="calificacion" value="5">
                 </div>
               </div>
 
